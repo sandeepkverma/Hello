@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.mmi.entity.GroupInfo" table="mmi_groupinfo">
+      <meta attribute="class-description">
+         This class contains the group information.
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="name" column="name" type="string"/>
+      <property name="created_by" column="created_by" type="int"/>
+      <property name="created_datetime" column="created_datetime" type="string"/>
+   </class>
+</hibernate-mapping>
