@@ -9,7 +9,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Intouch - MapmyIndia Tracking Solution</title>
+  <title>myproject - MapmyIndia Tracking Solution</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrapv3.3.6.css" type="text/css" />
@@ -30,7 +30,7 @@
           <strong>Sign in to get in touch</strong>
         </header>
         
-        <form action="${pageContext.request.contextPath}/login" method="post" name="intouch">
+        <form action="${pageContext.request.contextPath}/login" method="post" name="myproject">
           <div class="list-group">
 		 
                             <div id="showMessage" style="color: red;">
