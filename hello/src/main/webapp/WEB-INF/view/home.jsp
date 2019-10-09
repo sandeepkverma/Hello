@@ -7,7 +7,7 @@
 
 <head>
 <meta charset="utf-8" />
-<title>Intouch - MapmyIndia Tracking Solution</title>
+<title>myproject - MapmyIndia Tracking Solution</title>
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrapv3.3.6.css" type="text/css" />
@@ -1365,15 +1365,15 @@
 			             data: "",
 			             url: "ajax/getdevicedata",
 			             success: function (data) {
-			            	 $intouch.deviceobj=data;	 
+			            	 $myproject.deviceobj=data;	 
 			            	 
 			             }, error: function (xhr) {
 			                 alert(xhr.responseText);
 			             }
 			         });
 
-					intouch.ajax("api_name=mmi_livedata&aparam=true",
-							intouch.callBack.vehicleList);
+					myproject.ajax("api_name=mmi_livedata&aparam=true",
+							myproject.callBack.vehicleList);
 
 				});
 
@@ -1390,15 +1390,15 @@
 				filter[status] = $(this).prop("checked");
 			});
 			filter["allcheck"] = allCheckFlag;
-			intouch.leafMap.filterMarker(filter);
-			intouch.map.changeStatus();
+			myproject.leafMap.filterMarker(filter);
+			myproject.map.changeStatus();
 		});
 
 		$('#livetable tbody').on('click', 'td a.details', function() {
 
 			var tr = $(this).closest('tr');
 			var deviceId = $(this).closest('tr').attr("deviceid");
-			var row = intouch.map.table.row(tr);
+			var row = myproject.map.table.row(tr);
 
 			if (row.child.isShown()) {
 				// This row is already open - close it
@@ -1406,7 +1406,7 @@
 				tr.removeClass('shown');
 			} else {
 				// Open this row
-				row.child(intouch.map.format(deviceId)).show();
+				row.child(myproject.map.format(deviceId)).show();
 				tr.addClass('shown');
 			}
 		});
@@ -1414,9 +1414,9 @@
 		$('#livetable tbody').on('click', '.track', function() {
 
 			var deviceId = $(this).closest('tr').prev().attr("deviceid");
-			var lat = intouch.map.getLiveVehicleList()[deviceId].latitude;
-			var lng = intouch.map.getLiveVehicleList()[deviceId].longitude;
-			intouch.leafMap.map.setView([ lat, lng ], 14);
+			var lat = myproject.map.getLiveVehicleList()[deviceId].latitude;
+			var lng = myproject.map.getLiveVehicleList()[deviceId].longitude;
+			myproject.leafMap.map.setView([ lat, lng ], 14);
 
 		});
 
